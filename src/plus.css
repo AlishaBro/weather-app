@@ -1,0 +1,102 @@
+.gridItem1 {
+  border: 1px solid rgb(157, 157, 192);
+  padding: 20px 20px 0px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.searchbar {
+  width: 40%;
+  box-shadow: 5px 5px 5px rgb(180, 173, 173);
+  border: thin solid rgb(55, 138, 194);
+  padding: 5px;
+  border-radius: 6px;
+}
+
+input[type="submit"],
+#button {
+  background-color: rgb(55, 138, 194);
+  border: none;
+  color: white;
+  width: 120px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgb(180, 173, 173);
+  border-radius: 6px;
+  margin-left: 10px;
+}
+
+.header,
+.header2,
+.dailyForcast,
+.WeeklyForcast {
+  list-style-type: none;
+  padding: 0;
+  font-family: monospace;
+  font-size: 20px;
+}
+li a,
+li .median {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+  position: relative;
+  top: -54px;
+  left: 43px;
+}
+.currentTemp {
+  font-size: 35px;
+}
+
+li.place,
+ul li.maincloud {
+  font-family: monospace;
+  font-size: 35px;
+  color: rgb(55, 138, 194);
+  line-height: 30px;
+}
+
+.humid,
+#Hvalue {
+  font-size: 14px;
+  list-style-type: none;
+  font-family: monospace;
+  line-height: 30px;
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+.windy,
+#Wvalue {
+  font-size: 14px;
+  list-style-type: none;
+  font-family: monospace;
+}
+
+.icons,
+.weather {
+  color: rgb(55, 138, 194);
+}
+.fa-cloud {
+  font: size 25px;
+  line-height: 30px;
+}
+
+.gridItem2,
+.gridItem3 {
+  border: 1px solid grey;
+  padding: 15px 15px 15px 30px;
+  border-top-width: 0px;
+}
+
+.date,
+.time {
+  line-height: 35px;
+}
+
+.gridItem3 {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
