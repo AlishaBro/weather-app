@@ -1,8 +1,8 @@
 .gridItem1 {
   border: 1px solid rgb(157, 157, 192);
   padding: 20px 20px 0px 30px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .searchbar {
