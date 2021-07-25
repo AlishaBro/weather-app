@@ -32,12 +32,16 @@ console.log(day);
 let date = todaysDate.getDate();
 let year = todaysDate.getFullYear();
 let month = months[todaysDate.getMonth()];
+let time = todaysDate.getTime();
+let formatTime = `${time} Hrs`;
 
 let currentDate = `${day}, ${date} ${month} ${year}`;
 console.log(currentDate);
 let updateDate = document.querySelector("#current-date");
 console.log(updateDate);
 updateDate.innerHTML = currentDate;
+let updateTime = document.querySelector(".time");
+updateTime.innerHTML = formatTime;
 
 //currentTemp button Handling//
 
