@@ -3,6 +3,10 @@
   padding: 20px 20px 0px 30px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  background-image: url("https://images.unsplash.com/photo-1528283648649-33347faa5d9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=vai-da-Kff2wSaqeMA-unsplash.jpg");
 }
 
 .searchbar {
@@ -27,6 +31,18 @@ input[type="submit"],
   margin-left: 10px;
 }
 
+img {
+  height: 84px;
+  margin-top: 16px;
+  margin-right: 7px;
+}
+
+.currentTemp {
+  float: left;
+  height: 60px;
+  margin-top: 16px;
+}
+
 .header,
 .header2,
 .dailyForcast,
@@ -36,48 +52,64 @@ input[type="submit"],
   font-family: monospace;
   font-size: 20px;
 }
-li a,
-li .median {
+a.celcius,
+a.fahrenheit,
+.median {
   text-decoration: none;
   color: black;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   position: relative;
-  top: -54px;
-  left: 43px;
+  top: -45px;
+  left: 73px;
 }
 .currentTemp {
-  font-size: 35px;
+  font-size: 59px;
+  color: rgb(55, 138, 194);
+  float: left;
 }
 
-li.place,
-ul li.maincloud {
-  font-family: monospace;
-  font-size: 35px;
+.float-left {
+  float: left;
+}
+li.place {
+  margin-top: 13px;
+  font-size: 52px;
   color: rgb(55, 138, 194);
-  line-height: 30px;
+  font-family: monospace;
 }
 
 .humid,
 #Hvalue {
-  font-size: 14px;
+  font-size: 16px;
   list-style-type: none;
   font-family: monospace;
   line-height: 30px;
-  margin-top: 60px;
+  margin-top: 102px;
   margin-bottom: 0px;
+  margin-left: 15px;
 }
 
 .windy,
 #Wvalue {
-  font-size: 14px;
+  font-size: 16px;
   list-style-type: none;
   font-family: monospace;
+  margin-left: 15px;
 }
 
 .icons,
 .weather {
   color: rgb(55, 138, 194);
+}
+
+.status {
+  line-height: 22px;
+
+  text-align: center;
+  font-size: 20px;
+
+  font-family: monospace;
 }
 .fa-cloud {
   font: size 25px;
@@ -88,7 +120,12 @@ ul li.maincloud {
 .gridItem3 {
   border: 1px solid grey;
   padding: 15px 15px 15px 30px;
+  background-image: url("https://images.unsplash.com/photo-1528283648649-33347faa5d9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=vai-da-Kff2wSaqeMA-unsplash.jpg");
+
   border-top-width: 0px;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
 }
 
 .date,
@@ -99,4 +136,15 @@ ul li.maincloud {
 .gridItem3 {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+a.note {
+  text-decoration: none;
+  font-family: monospace;
+  margin-left: 488px;
+  line-height: 40px;
+}
+
+.myname {
+  font-family: monospace;
 }

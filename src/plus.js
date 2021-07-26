@@ -26,13 +26,17 @@ let months = [
   "Dec",
 ];
 
+handleCurrentTemp();
+
 let day = days[todaysDate.getDay()];
 console.log(day);
 
 let date = todaysDate.getDate();
 let year = todaysDate.getFullYear();
 let month = months[todaysDate.getMonth()];
-let time = todaysDate.getTime();
+let time = todaysDate.toLocaleTimeString();
+
+console.log(time);
 let formatTime = `${time} Hrs`;
 
 let currentDate = `${day}, ${date} ${month} ${year}`;
@@ -67,7 +71,7 @@ function showlocation(location) {
   place.innerHTML = loc;
 
   let temperature = Math.round(location.data.main.temp);
-  let currentTemp = document.querySelector("li#temp");
+  let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = temperature;
 
   let humidity = location.data.main.humidity;
@@ -79,6 +83,19 @@ function showlocation(location) {
   console.log(wind);
   let windy = document.querySelector("#Wvalue");
   windy.innerHTML = ` ${wind}km/hr`;
+
+  let status = document.querySelector(".status");
+  status.innerHTML = location.data.weather[0].main;
+
+  let image = document.querySelector("img");
+  console.log("im here displaying the image value");
+  console.log(image);
+  let icon = location.data.weather[0].icon;
+  let link = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  console.log(link);
+  console.log("icon link");
+  document.getElementById("weatherimg").src = link;
+  console.log(image.innerHTML);
 }
 
 function handleCurrentTemp() {
@@ -89,7 +106,7 @@ function handleCurrentTemp() {
 
 function handleResponse(response) {
   let temperature = Math.round(response.data.main.temp);
-  let currentTemp = document.querySelector("li#temp");
+  let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = temperature;
 
   let humidity = response.data.main.humidity;
@@ -101,6 +118,19 @@ function handleResponse(response) {
   console.log(wind);
   let windy = document.querySelector("#Wvalue");
   windy.innerHTML = ` ${wind}km/hr`;
+
+  let status = document.querySelector(".status");
+  status.innerHTML = response.data.weather[0].main;
+
+  let image = document.querySelector("img");
+  console.log("im here displaying the image value");
+  console.log(image);
+  let icon = response.data.weather[0].icon;
+  let link = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+  console.log(link);
+  console.log("icon link");
+  document.getElementById("weatherimg").src = link;
+  console.log(image.innerHTML);
 }
 
 //get the value (City name)from the searchbar and display it in the webpage //
@@ -122,7 +152,7 @@ function handlesearch(event) {
   console.log(apiService);
   axios.get(`${apiUrl}&q=${cityName}&appid=${apiKey}`).then(handleResponse);
 
-  //reset the searhbar//
+  //reset the searchbar//
   let resetData = document.querySelector("form");
   resetData.reset();
 }
@@ -130,13 +160,13 @@ function handlesearch(event) {
 //temperature conversion//
 
 function converttoF() {
-  let temp = document.querySelector("#temp");
+  let temp = document.querySelector(".currentTemp");
   console.log(temp);
   temp.innerHTML = "77";
 }
 
 function converttoC() {
-  let temp = document.querySelector("li#temp");
+  let temp = document.querySelector(".currentTemp");
   //var temp = document.getElementById("#temp");
   //console.log(temp);
   temp.innerHTML = "25";

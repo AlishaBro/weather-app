@@ -40,7 +40,7 @@
         <div class="mb-4"></div>
 
         <div class="row">
-          <div class="col-6">
+          <div class="col-5">
             <ul class="header">
               <li class="place">Berlin</li>
               <li class="date" id="current-date">Monday, 3rd July 2021</li>
@@ -48,22 +48,22 @@
             </ul>
           </div>
 
-          <div class="col-2">
-            <ul class="header2">
-              <li class="maincloud">
-                <i class="fas fa-cloud"></i>
-              </li>
-              <li class="status">Cloudy</li>
-              <li class="currentTemp" id="temp">25</li>
-              <li>
-                <span class="units">
-                  <a href="#" class="celcius">°C</a><span class="median">|</span
-                  ><a href="#" class="fahrenheit">°F</a>
-                </span>
-              </li>
-              <!-- <span class="humid">Humidity:</span><span id="Hvalue">00</span> -->
-              <!-- <span class="windy">Wind:</span><span id="Wvalue">00</span> -->
-            </ul>
+          <div class="col-3">
+            <div class="header2"></div>
+            <div class=".clearfix">
+              <img
+                src="http://openweathermap.org/img/wn/03d@2x.png"
+                alt="icon"
+                class="float-left"
+                id="weatherimg"
+              />
+              <span class="currentTemp float-left" id="temp">19 </span
+              ><span class="units">
+                <a href="#" class="celcius">°C</a><span class="median">|</span
+                ><a href="#" class="fahrenheit">°F</a>
+              </span>
+            </div>
+            <div class="status">Cloudy</div>
           </div>
           <div class="col-4">
             <ul>
@@ -185,6 +185,9 @@
           </div>
         </div>
       </div>
+      <a href="https://github.com/AlishaBro/weather-app" class="note"
+        >Open source Code</a
+      ><span class="myname">,by Alisha Brodin</span>
     </div>
     <script src="src/plus.js"></script>
   </body>
