@@ -1,16 +1,5 @@
-.gridItem1 {
-  border: 1px solid rgb(157, 157, 192);
-  padding: 20px 20px 0px 30px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 60%;
-  display: block;
-  margin: 0 auto;
-  background-image: url("https://images.unsplash.com/photo-1528283648649-33347faa5d9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=vai-da-Kff2wSaqeMA-unsplash.jpg");
-}
-
 .searchbar {
-  width: 40%;
+  width: 50%;
   box-shadow: 5px 5px 5px rgb(180, 173, 173);
   border: thin solid rgb(55, 138, 194);
   padding: 5px;
@@ -33,18 +22,35 @@ input[type="submit"],
 
 img {
   height: 84px;
-  margin-top: 16px;
-  margin-right: 7px;
 }
 
+.status {
+  font-size: 20px;
+  font-family: monospace;
+}
 .currentTemp {
-  float: left;
-  height: 60px;
-  margin-top: 16px;
+  font-size: 51px;
+  color: rgb(55, 138, 194);
+  margin-left: 23px;
+  line-height: 40px;
 }
 
+.images {
+  margin-top: 14px;
+}
+
+.units a.celcius,
+.units a.fahrenheit,
+.median {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  font-weight: 100px;
+  position: relative;
+  top: -31px;
+  left: 3px;
+}
 .header,
-.header2,
 .dailyForcast,
 .WeeklyForcast {
   list-style-type: none;
@@ -52,46 +58,29 @@ img {
   font-family: monospace;
   font-size: 20px;
 }
-a.celcius,
-a.fahrenheit,
-.median {
-  text-decoration: none;
-  color: black;
-  font-size: 13px;
-  font-weight: 600;
-  position: relative;
-  top: -45px;
-  left: 73px;
-}
-.currentTemp {
-  font-size: 59px;
-  color: rgb(55, 138, 194);
-  float: left;
-}
 
-.float-left {
-  float: left;
-}
 li.place {
   margin-top: 13px;
-  font-size: 52px;
+  font-size: 51px;
   color: rgb(55, 138, 194);
   font-family: monospace;
 }
 
-.humid,
+.humid {
+  line-height: 30px;
+  margin-top: 73px;
+}
+
+#Wvalue,
 #Hvalue {
+  margin: -4px;
   font-size: 16px;
   list-style-type: none;
   font-family: monospace;
-  line-height: 30px;
-  margin-top: 102px;
-  margin-bottom: 0px;
-  margin-left: 15px;
 }
 
 .windy,
-#Wvalue {
+.humid {
   font-size: 16px;
   list-style-type: none;
   font-family: monospace;
@@ -103,39 +92,14 @@ li.place {
   color: rgb(55, 138, 194);
 }
 
-.status {
-  line-height: 22px;
-
-  text-align: center;
-  font-size: 20px;
-
-  font-family: monospace;
-}
 .fa-cloud {
   font: size 25px;
   line-height: 30px;
 }
 
-.gridItem2,
-.gridItem3 {
-  border: 1px solid grey;
-  padding: 15px 15px 15px 30px;
-  background-image: url("https://images.unsplash.com/photo-1528283648649-33347faa5d9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=vai-da-Kff2wSaqeMA-unsplash.jpg");
-
-  border-top-width: 0px;
-  width: 60%;
-  display: block;
-  margin: 0 auto;
-}
-
 .date,
 .time {
-  line-height: 35px;
-}
-
-.gridItem3 {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  line-height: 29px;
 }
 
 a.note {
@@ -147,4 +111,25 @@ a.note {
 
 .myname {
   font-family: monospace;
+}
+
+.weather-app {
+  border: 1px solid grey;
+  border-radius: 30px;
+  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding: 30px 20px 20px 28px;
+  background-image: url("https://images.unsplash.com/photo-1528283648649-33347faa5d9e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=vai-da-Kff2wSaqeMA-unsplash.jpg");
+}
+
+.gridItem1 {
+  border-bottom: 1px solid grey;
+}
+.gridItem2 {
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+}
+.gridItem3 {
+  margin-top: 10px;
 }
