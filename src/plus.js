@@ -110,12 +110,10 @@ function handleResponse(response) {
   currentTemp.innerHTML = temperature;
 
   let humidity = response.data.main.humidity;
-
   let humid = document.querySelector("#Hvalue");
   humid.innerHTML = ` ${humidity}%`;
 
   let wind = response.data.wind.speed;
-
   let windy = document.querySelector("#Wvalue");
   windy.innerHTML = ` ${wind}km/hr`;
 
@@ -123,7 +121,6 @@ function handleResponse(response) {
   status.innerHTML = response.data.weather[0].main;
 
   let image = document.querySelector("img");
-
   let icon = response.data.weather[0].icon;
   let link = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
@@ -135,10 +132,8 @@ function handleResponse(response) {
 function handlesearch(event) {
   event.preventDefault();
   let inputPlace = document.querySelector(".searchbar");
-
   let place = document.querySelector(".place");
   let cityName = inputPlace.value;
-
   place.innerHTML = cityName;
 
   //Api service call to the weather API//
