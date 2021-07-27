@@ -36,13 +36,15 @@ let mints = todaysDate.getMinutes();
 let parameter = "AM";
 if (hours > 12) {
   hours = hours - 12;
-  hours = `0${hours}`;
   parameter = "PM";
 } else if (hours === 0) {
   hours = 12;
   parameter = "AM";
 }
 
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 if (mints < 10) {
   mints = `0${mints}`;
 }
