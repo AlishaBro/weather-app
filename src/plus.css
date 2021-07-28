@@ -30,7 +30,7 @@ img {
 }
 .currentTemp {
   font-size: 51px;
-  color: rgb(55, 138, 194);
+  color: rgb(107, 114, 82);
   margin-left: 23px;
   line-height: 40px;
 }
@@ -62,7 +62,8 @@ img {
 li.place {
   margin-top: 13px;
   font-size: 51px;
-  color: rgb(55, 138, 194);
+  /* color: rgb(55, 138, 194); */
+  color: rgb(126, 122, 122);
   font-family: monospace;
 }
 
