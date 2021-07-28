@@ -72,42 +72,33 @@ function showlocation(location) {
   let inputPlace = document.querySelector(".searchbar");
   let place = document.querySelector(".place");
   let cityName = inputPlace.value;
-  place.innerHTML = loc;
-
-  let temperature = Math.round(location.data.main.temp);
+  temperature = Math.round(location.data.main.temp);
   let currentTemp = document.querySelector(".currentTemp");
-  currentTemp.innerHTML = temperature;
-
   let humidity = location.data.main.humidity;
-
   let humid = document.querySelector("#Hvalue");
-  humid.innerHTML = ` ${humidity}%`;
-
   let wind = location.data.wind.speed;
-
   let windy = document.querySelector("#Wvalue");
-  windy.innerHTML = ` ${wind}km/hr`;
-
   let status = document.querySelector(".status");
-  status.innerHTML = location.data.weather[0].main;
-
   let image = document.querySelector("img");
-
   let icon = location.data.weather[0].icon;
+  place.innerHTML = loc;
+  currentTemp.innerHTML = temperature;
+  humid.innerHTML = ` ${humidity}%`;
+  windy.innerHTML = ` ${wind}km/hr`;
+  status.innerHTML = location.data.weather[0].description;
   let link = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-
-  document.getElementById("weatherimg").src = link;
+  document.getElementById("#weatherimg").src = link;
 }
 
 function handleCurrentTemp() {
   navigator.geolocation.getCurrentPosition(handlePosition);
 }
 
-//Handling the API response and displaying it in the webpage->Temperature, Humidity, Wind<---//
+//*******Handling the API response and displaying it in the webpage->Temperature, Humidity, Wind********//
 //handling error//
 
 function handleResponse(response) {
-  let temperature = Math.round(response.data.main.temp);
+  temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector(".currentTemp");
   currentTemp.innerHTML = temperature;
 
@@ -159,13 +150,13 @@ function handlesearch(event) {
 function converttoF() {
   let temp = document.querySelector(".currentTemp");
 
-  temp.innerHTML = "77";
+  temp.innerHTML = Math.round(temperature * 1.8 + 32);
 }
 
 function converttoC() {
   let temp = document.querySelector(".currentTemp");
 
-  temp.innerHTML = "25";
+  temp.innerHTML = temperature;
 }
 
 //Declaration and functions//
@@ -181,3 +172,5 @@ celcius.addEventListener("click", converttoC);
 
 let button = document.querySelector("#button");
 button.addEventListener("click", handleCurrentTemp);
+
+let temperature = null;
