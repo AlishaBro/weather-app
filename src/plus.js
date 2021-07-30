@@ -74,9 +74,9 @@ function showlocation(location) {
   let place = document.querySelector(".place");
   temperature = Math.round(location.data.main.temp);
   let currentTemp = document.querySelector(".currentTemp");
-  let humidity = location.data.main.humidity;
+  let humidity = Math.round(location.data.main.humidity);
   let humid = document.querySelector("#Hvalue");
-  let wind = location.data.wind.speed;
+  let wind = Math.round(location.data.wind.speed);
   let windy = document.querySelector("#Wvalue");
   let status = document.querySelector(".status");
   let image = document.querySelector("img");
@@ -109,10 +109,10 @@ function handleResponse(response) {
   currentTemp.innerHTML = temperature;
 
   let humid = document.querySelector("#Hvalue");
-  humid.innerHTML = ` ${response.data.main.humidity}%`;
+  humid.innerHTML = ` ${Math.round(response.data.main.humidity)}%`;
 
   let windy = document.querySelector("#Wvalue");
-  windy.innerHTML = ` ${response.data.wind.speed}km/hr`;
+  windy.innerHTML = ` ${Math.round(response.data.wind.speed)}km/hr`;
 
   let status = document.querySelector(".status");
   status.innerHTML = response.data.weather[0].description;
