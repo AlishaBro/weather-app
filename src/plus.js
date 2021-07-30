@@ -52,6 +52,7 @@ function formatdtandTime(apidt) {
 
   let formatTime = `${hours}:${mints} ${parameter}`;
   let currentDate = `${day}, ${date} ${month} ${year}`;
+  console.log(currentDate);
   let updateDate = document.querySelector("#current-date");
 
   updateDate.innerHTML = currentDate;
@@ -122,6 +123,10 @@ function handleResponse(response) {
   let link = `http://openweathermap.org/img/wn/${icon}@2x.png`;
 
   document.getElementById("weatherimg").src = link;
+
+  let x = response.data.dt;
+  let y = x * 1000;
+  formatdtandTime(y);
 }
 
 //get the value (City name)from the searchbar and display it in the webpage //

@@ -12,193 +12,198 @@
       src="https://kit.fontawesome.com/d79d11449d.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="src/plus.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/plus.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="mb-5"></div>
-      <div class="shadow weather-app">
-        <div class="gridItem1">
-          <form>
-            <input
-              type="text"
-              class="searchbar"
-              placeholder="Enter city"
-              required
-            />
-            <input type="submit" class="btn" value="Search" />
-            <button type="button" class="btn btn-primary" id="button">
-              Current Temp
-            </button>
-          </form>
+    <div class="app">
+      <div class="container">
+        <div class="mb-4"></div>
+        <div class="shadow weather-app">
+          <div class="gridItem1">
+            <form>
+              <input
+                type="text"
+                class="form-control search-input searchbar"
+                placeholder="Enter city"
+                width="60%"
+                required
+              />
+              <input type="submit" class="btn" value="Search" />
+              <button type="button" class="btn" id="button">
+                <i class="fas fa-map-marked-alt locIcon"></i>
+              </button>
+            </form>
 
-          <div class="mb-4"></div>
+            <div class="mb-4"></div>
 
-          <div class="row">
-            <div class="col-6">
-              <ul class="header">
-                <li class="place">Berlin,DE</li>
-              </ul>
-            </div>
-
-            <div class="col-6">
-              <div class=".clearfix images">
-                <img
-                  src="http://openweathermap.org/img/wn/03d@2x.png"
-                  alt="icon"
-                  class="float-left"
-                  id="weatherimg"
-                />
-                <span class="status">Cloudy</span>
-              </div>
-            </div>
             <div class="row">
-              <div class="col-5">
+              <div class="col-6">
                 <ul class="header">
-                  <li><small class="lastUpdated">Lasted Updated:</small></li>
-                  <li class="date" id="current-date">Monday,3 Jul 2021</li>
-                  <li class="time">04:00 PM</li>
+                  <li class="place">Berlin,DE</li>
                 </ul>
               </div>
-              <div class="col-4">
-                <span class="currentTemp" id="temp">19</span>
-                <span class="units">
-                  <a href="#" class="celcius">°C</a><span class="median">|</span
-                  ><a href="#" class="fahrenheit">°F</a>
-                </span>
+
+              <div class="col-6">
+                <div class=".clearfix images">
+                  <img
+                    src="http://openweathermap.org/img/wn/03d@2x.png"
+                    alt="icon"
+                    class="float-left"
+                    id="weatherimg"
+                  />
+                  <span class="status">Cloudy</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-5">
+                  <ul class="header">
+                    <li><small class="lastUpdated">Lasted Updated:</small></li>
+                    <li class="date" id="current-date">Monday,3 Jul 2021</li>
+                    <li class="time">04:00 PM</li>
+                  </ul>
+                </div>
+                <div class="col-4">
+                  <span class="currentTemp" id="temp">19</span>
+                  <span class="units">
+                    <a href="#" class="celcius">°C</a
+                    ><span class="median">|</span
+                    ><a href="#" class="fahrenheit">°F</a>
+                  </span>
+                </div>
+
+                <div class="col-3">
+                  <ul>
+                    <li class="humid">
+                      <span>Humidity: </span><span id="Hvalue">50%</span>
+                    </li>
+                    <li class="windy">
+                      <span>Wind: </span><span id="Wvalue">90km/hr</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gridItem2">
+            <div class="row row-cols-5">
+              <div class="col-2.5">
+                <ul class="dailyForcast">
+                  <li>Now</li>
+                  <li><i class="fas fa-cloud weather"> </i></li>
+                  <li>25°C</li>
+                </ul>
+              </div>
+
+              <div class="col-2.5">
+                <ul class="dailyForcast">
+                  <li>5pm</li>
+                  <li><i class="fas fa-cloud-rain weather"></i></li>
+                  <li>25°C</li>
+                </ul>
+              </div>
+
+              <div class="col-2.5">
+                <ul class="dailyForcast">
+                  <li>6pm</li>
+                  <li><i class="fas fa-bolt weather"></i></li>
+                  <li>25°C</li>
+                </ul>
+              </div>
+
+              <div class="col-2.5">
+                <ul class="dailyForcast">
+                  <li>7pm</li>
+                  <li><i class="fas fa-cloud weather"></i></li>
+                  <li>25°C</li>
+                </ul>
+              </div>
+
+              <div class="col-2.5">
+                <ul class="dailyForcast">
+                  <li>8pm</li>
+                  <li><i class="fas fa-cloud weather"></i></li>
+                  <li>25°C</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="gridItem3">
+            <div class="row row-cols-4">
+              <div class="col-3">
+                <ul class="WeeklyForcast days">
+                  <li>Monday</li>
+                  <li>Tuesday</li>
+                  <li>Wednesday</li>
+                  <li>Thursday</li>
+                  <li>Friday</li>
+                  <li>Saturday</li>
+                  <li>Sunday</li>
+                </ul>
               </div>
 
               <div class="col-3">
-                <ul>
-                  <li class="humid">
-                    <span>Humidity: </span><span id="Hvalue">50%</span>
+                <ul class="WeeklyForcast icons">
+                  <li>
+                    <i class="fas fa-cloud"></i>
                   </li>
-                  <li class="windy">
-                    <span>Wind: </span><span id="Wvalue">90km/hr</span>
+                  <li>
+                    <i class="fas fa-cloud"></i>
                   </li>
+                  <li>
+                    <i class="fas fa-cloud"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-cloud"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-cloud"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-cloud"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-cloud"></i>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-2.5">
+                <ul class="WeeklyForcast highTemp">
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                </ul>
+              </div>
+
+              <div class="col-2.5">
+                <ul class="WeeklyForcast lowTemp">
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
+                  <li>25°C</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="gridItem2">
-          <div class="row row-cols-5">
-            <div class="col-2.5">
-              <ul class="dailyForcast">
-                <li>Now</li>
-                <li><i class="fas fa-cloud weather"> </i></li>
-                <li>25°C</li>
-              </ul>
-            </div>
-
-            <div class="col-2.5">
-              <ul class="dailyForcast">
-                <li>5pm</li>
-                <li><i class="fas fa-cloud-rain weather"></i></li>
-                <li>25°C</li>
-              </ul>
-            </div>
-
-            <div class="col-2.5">
-              <ul class="dailyForcast">
-                <li>6pm</li>
-                <li><i class="fas fa-bolt weather"></i></li>
-                <li>25°C</li>
-              </ul>
-            </div>
-
-            <div class="col-2.5">
-              <ul class="dailyForcast">
-                <li>7pm</li>
-                <li><i class="fas fa-cloud weather"></i></li>
-                <li>25°C</li>
-              </ul>
-            </div>
-
-            <div class="col-2.5">
-              <ul class="dailyForcast">
-                <li>8pm</li>
-                <li><i class="fas fa-cloud weather"></i></li>
-                <li>25°C</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="gridItem3">
-          <div class="row row-cols-4">
-            <div class="col-3">
-              <ul class="WeeklyForcast days">
-                <li>Monday</li>
-                <li>Tuesday</li>
-                <li>Wednesday</li>
-                <li>Thursday</li>
-                <li>Friday</li>
-                <li>Saturday</li>
-                <li>Sunday</li>
-              </ul>
-            </div>
-
-            <div class="col-3">
-              <ul class="WeeklyForcast icons">
-                <li>
-                  <i class="fas fa-cloud"></i>
-                </li>
-                <li>
-                  <i class="fas fa-cloud"></i>
-                </li>
-                <li>
-                  <i class="fas fa-cloud"></i>
-                </li>
-                <li>
-                  <i class="fas fa-cloud"></i>
-                </li>
-                <li>
-                  <i class="fas fa-cloud"></i>
-                </li>
-                <li>
-                  <i class="fas fa-cloud"></i>
-                </li>
-                <li>
-                  <i class="fas fa-cloud"></i>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-2.5">
-              <ul class="WeeklyForcast highTemp">
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-              </ul>
-            </div>
-
-            <div class="col-2.5">
-              <ul class="WeeklyForcast lowTemp">
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-                <li>25°C</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <a href="https://github.com/AlishaBro/weather-app" class="note"
+          >Open source Code</a
+        ><span class="myname">,by Alisha Brodin</span>
       </div>
-      <a href="https://github.com/AlishaBro/weather-app" class="note"
-        >Open source Code</a
-      ><span class="myname">,by Alisha Brodin</span>
     </div>
     <script src="src/plus.js"></script>
   </body>
