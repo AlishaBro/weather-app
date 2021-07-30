@@ -81,7 +81,7 @@ function showlocation(location) {
   let status = document.querySelector(".status");
   let image = document.querySelector("img");
   let icon = location.data.weather[0].icon;
-  place.innerHTML = location.data.name;
+  place.innerHTML = `${location.data.name},${location.data.sys.country}`;
   currentTemp.innerHTML = temperature;
   humid.innerHTML = ` ${humidity}%`;
   windy.innerHTML = ` ${wind}km/hr`;
@@ -102,7 +102,7 @@ function handleCurrentTemp() {
 
 function handleResponse(response) {
   let place = document.querySelector(".place");
-  place.innerHTML = response.data.name;
+  place.innerHTML = `${response.data.name},${response.data.sys.country}`;
 
   temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector(".currentTemp");
@@ -137,6 +137,7 @@ function handlesearch(event) {
   let apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric";
   let apiKey = "298159ea1285926f2960068f39a80cbf";
   let apiService = `${apiUrl}&q=${cityName}&appid=${apiKey}`;
+  console.log(apiService);
 
   axios
     .get(apiService)

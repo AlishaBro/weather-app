@@ -41,15 +41,13 @@
           <div class="mb-4"></div>
 
           <div class="row">
-            <div class="col-5">
+            <div class="col-6">
               <ul class="header">
-                <li class="place">Berlin</li>
-                <li class="date" id="current-date">Monday, 3rd July 2021</li>
-                <li class="time">4:00Pm</li>
+                <li class="place">Berlin,DE</li>
               </ul>
             </div>
 
-            <div class="col-4">
+            <div class="col-6">
               <div class=".clearfix images">
                 <img
                   src="http://openweathermap.org/img/wn/03d@2x.png"
@@ -59,24 +57,33 @@
                 />
                 <span class="status">Cloudy</span>
               </div>
-              <div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <ul class="header">
+                  <li><small class="lastUpdated">Lasted Updated:</small></li>
+                  <li class="date" id="current-date">Monday,3 Jul 2021</li>
+                  <li class="time">04:00 PM</li>
+                </ul>
+              </div>
+              <div class="col-4">
                 <span class="currentTemp" id="temp">19</span>
-
                 <span class="units">
                   <a href="#" class="celcius">°C</a><span class="median">|</span
                   ><a href="#" class="fahrenheit">°F</a>
                 </span>
               </div>
-            </div>
-            <div class="col-3">
-              <ul>
-                <li class="humid">
-                  <span>Humidity: </span><span id="Hvalue">50%</span>
-                </li>
-                <li class="windy">
-                  <span>Wind: </span><span id="Wvalue">90km/hr</span>
-                </li>
-              </ul>
+
+              <div class="col-3">
+                <ul>
+                  <li class="humid">
+                    <span>Humidity: </span><span id="Hvalue">50%</span>
+                  </li>
+                  <li class="windy">
+                    <span>Wind: </span><span id="Wvalue">90km/hr</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
